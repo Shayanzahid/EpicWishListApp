@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E48288591F0FA8AF00F6694A /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48288511F0FA8AF00F6694A /* Item+CoreDataClass.swift */; };
+		E482885A1F0FA8AF00F6694A /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48288521F0FA8AF00F6694A /* Item+CoreDataProperties.swift */; };
+		E482885B1F0FA8AF00F6694A /* Store+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48288531F0FA8AF00F6694A /* Store+CoreDataClass.swift */; };
+		E482885C1F0FA8AF00F6694A /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48288541F0FA8AF00F6694A /* Store+CoreDataProperties.swift */; };
+		E482885D1F0FA8AF00F6694A /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48288551F0FA8AF00F6694A /* Image+CoreDataClass.swift */; };
+		E482885E1F0FA8AF00F6694A /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48288561F0FA8AF00F6694A /* Image+CoreDataProperties.swift */; };
+		E482885F1F0FA8AF00F6694A /* ItemType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48288571F0FA8AF00F6694A /* ItemType+CoreDataClass.swift */; };
+		E48288601F0FA8AF00F6694A /* ItemType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48288581F0FA8AF00F6694A /* ItemType+CoreDataProperties.swift */; };
 		E4CB43631F0E686000569500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CB43621F0E686000569500 /* AppDelegate.swift */; };
 		E4CB43651F0E686000569500 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CB43641F0E686000569500 /* ViewController.swift */; };
 		E4CB43681F0E686000569500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4CB43661F0E686000569500 /* Main.storyboard */; };
@@ -16,6 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E48288511F0FA8AF00F6694A /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E48288521F0FA8AF00F6694A /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E48288531F0FA8AF00F6694A /* Store+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E48288541F0FA8AF00F6694A /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E48288551F0FA8AF00F6694A /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E48288561F0FA8AF00F6694A /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E48288571F0FA8AF00F6694A /* ItemType+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E48288581F0FA8AF00F6694A /* ItemType+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E4CB435F1F0E686000569500 /* EpicWishListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EpicWishListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4CB43621F0E686000569500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4CB43641F0E686000569500 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +53,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E48288611F0FA8B700F6694A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E48288511F0FA8AF00F6694A /* Item+CoreDataClass.swift */,
+				E48288531F0FA8AF00F6694A /* Store+CoreDataClass.swift */,
+				E48288551F0FA8AF00F6694A /* Image+CoreDataClass.swift */,
+				E48288571F0FA8AF00F6694A /* ItemType+CoreDataClass.swift */,
+				E48288621F0FA8BC00F6694A /* Generated */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E48288621F0FA8BC00F6694A /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				E48288521F0FA8AF00F6694A /* Item+CoreDataProperties.swift */,
+				E48288541F0FA8AF00F6694A /* Store+CoreDataProperties.swift */,
+				E48288561F0FA8AF00F6694A /* Image+CoreDataProperties.swift */,
+				E48288581F0FA8AF00F6694A /* ItemType+CoreDataProperties.swift */,
+			);
+			name = Generated;
+			sourceTree = "<group>";
+		};
 		E4CB43561F0E686000569500 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +95,7 @@
 		E4CB43611F0E686000569500 /* EpicWishListApp */ = {
 			isa = PBXGroup;
 			children = (
+				E48288611F0FA8B700F6694A /* Model */,
 				E4CB43621F0E686000569500 /* AppDelegate.swift */,
 				E4CB43641F0E686000569500 /* ViewController.swift */,
 				E4CB43661F0E686000569500 /* Main.storyboard */,
@@ -139,9 +179,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E482885E1F0FA8AF00F6694A /* Image+CoreDataProperties.swift in Sources */,
 				E4CB43651F0E686000569500 /* ViewController.swift in Sources */,
+				E482885F1F0FA8AF00F6694A /* ItemType+CoreDataClass.swift in Sources */,
+				E482885B1F0FA8AF00F6694A /* Store+CoreDataClass.swift in Sources */,
 				E4CB43631F0E686000569500 /* AppDelegate.swift in Sources */,
+				E482885D1F0FA8AF00F6694A /* Image+CoreDataClass.swift in Sources */,
+				E48288591F0FA8AF00F6694A /* Item+CoreDataClass.swift in Sources */,
+				E48288601F0FA8AF00F6694A /* ItemType+CoreDataProperties.swift in Sources */,
+				E482885C1F0FA8AF00F6694A /* Store+CoreDataProperties.swift in Sources */,
 				E4CB436B1F0E686000569500 /* EpicWishListApp.xcdatamodeld in Sources */,
+				E482885A1F0FA8AF00F6694A /* Item+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +351,7 @@
 				E4CB43761F0E686000569500 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
