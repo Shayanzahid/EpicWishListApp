@@ -15,8 +15,9 @@
 		E482885E1F0FA8AF00F6694A /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48288561F0FA8AF00F6694A /* Image+CoreDataProperties.swift */; };
 		E482885F1F0FA8AF00F6694A /* ItemType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48288571F0FA8AF00F6694A /* ItemType+CoreDataClass.swift */; };
 		E48288601F0FA8AF00F6694A /* ItemType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48288581F0FA8AF00F6694A /* ItemType+CoreDataProperties.swift */; };
+		E48288651F0FBFEA00F6694A /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48288641F0FBFEA00F6694A /* ItemCell.swift */; };
 		E4CB43631F0E686000569500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CB43621F0E686000569500 /* AppDelegate.swift */; };
-		E4CB43651F0E686000569500 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CB43641F0E686000569500 /* ViewController.swift */; };
+		E4CB43651F0E686000569500 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CB43641F0E686000569500 /* MainVC.swift */; };
 		E4CB43681F0E686000569500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4CB43661F0E686000569500 /* Main.storyboard */; };
 		E4CB436B1F0E686000569500 /* EpicWishListApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E4CB43691F0E686000569500 /* EpicWishListApp.xcdatamodeld */; };
 		E4CB436D1F0E686000569500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4CB436C1F0E686000569500 /* Assets.xcassets */; };
@@ -32,9 +33,10 @@
 		E48288561F0FA8AF00F6694A /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E48288571F0FA8AF00F6694A /* ItemType+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E48288581F0FA8AF00F6694A /* ItemType+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E48288641F0FBFEA00F6694A /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		E4CB435F1F0E686000569500 /* EpicWishListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EpicWishListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4CB43621F0E686000569500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E4CB43641F0E686000569500 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E4CB43641F0E686000569500 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		E4CB43671F0E686000569500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4CB436A1F0E686000569500 /* EpicWishListApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EpicWishListApp.xcdatamodel; sourceTree = "<group>"; };
 		E4CB436C1F0E686000569500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 			name = Generated;
 			sourceTree = "<group>";
 		};
+		E48288631F0FBDC700F6694A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E48288641F0FBFEA00F6694A /* ItemCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		E4CB43561F0E686000569500 = {
 			isa = PBXGroup;
 			children = (
@@ -95,9 +105,10 @@
 		E4CB43611F0E686000569500 /* EpicWishListApp */ = {
 			isa = PBXGroup;
 			children = (
+				E48288631F0FBDC700F6694A /* View */,
 				E48288611F0FA8B700F6694A /* Model */,
 				E4CB43621F0E686000569500 /* AppDelegate.swift */,
-				E4CB43641F0E686000569500 /* ViewController.swift */,
+				E4CB43641F0E686000569500 /* MainVC.swift */,
 				E4CB43661F0E686000569500 /* Main.storyboard */,
 				E4CB436C1F0E686000569500 /* Assets.xcassets */,
 				E4CB436E1F0E686000569500 /* LaunchScreen.storyboard */,
@@ -180,13 +191,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E482885E1F0FA8AF00F6694A /* Image+CoreDataProperties.swift in Sources */,
-				E4CB43651F0E686000569500 /* ViewController.swift in Sources */,
+				E4CB43651F0E686000569500 /* MainVC.swift in Sources */,
 				E482885F1F0FA8AF00F6694A /* ItemType+CoreDataClass.swift in Sources */,
 				E482885B1F0FA8AF00F6694A /* Store+CoreDataClass.swift in Sources */,
 				E4CB43631F0E686000569500 /* AppDelegate.swift in Sources */,
 				E482885D1F0FA8AF00F6694A /* Image+CoreDataClass.swift in Sources */,
 				E48288591F0FA8AF00F6694A /* Item+CoreDataClass.swift in Sources */,
 				E48288601F0FA8AF00F6694A /* ItemType+CoreDataProperties.swift in Sources */,
+				E48288651F0FBFEA00F6694A /* ItemCell.swift in Sources */,
 				E482885C1F0FA8AF00F6694A /* Store+CoreDataProperties.swift in Sources */,
 				E4CB436B1F0E686000569500 /* EpicWishListApp.xcdatamodeld in Sources */,
 				E482885A1F0FA8AF00F6694A /* Item+CoreDataProperties.swift in Sources */,
