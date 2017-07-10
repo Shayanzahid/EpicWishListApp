@@ -172,17 +172,6 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         }
     }
     
-    func generateTestData()
-    {
-        let item = Item(context: context)
-        
-        item.title = "Dodge Challenger"
-        item.price = 30000
-        item.details = "I fucking love this car. It's probably the most awesome car in the whole world."
-        
-        appDelegate.saveContext()
-    }
-    
     @IBAction func sortSelected(_ sender: UISegmentedControl)
     {
         attemptFetch()
