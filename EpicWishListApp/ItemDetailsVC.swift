@@ -37,26 +37,7 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        
-//        let store = Store(context: context)
-//        store.name = "Hyperstar"
-//        
-//        let store2 = Store(context: context)
-//        store2.name = "Metro"
-//        
-//        let store3 = Store(context: context)
-//        store3.name = "Emporium Mall"
-//        
-//        let store4 = Store(context: context)
-//        store4.name = "Packages Mall"
-//        
-//        let store5 = Store(context: context)
-//        store5.name = "Mall Of Lahore"
-//        
-//        let store6 = Store(context: context)
-//        store6.name = "Shah Almi"
-//        
-//        appDelegate.saveContext()
+       
         fetchStore()
         
         if itemToEdit != nil
