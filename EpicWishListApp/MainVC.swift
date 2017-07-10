@@ -16,6 +16,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     @IBOutlet weak var segment: UISegmentedControl!
     
     var controller: NSFetchedResultsController<Item>!
+    var item: Item?
 
     override func viewDidLoad()
     {
@@ -65,14 +66,54 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         return 150
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        if let obj = controller.fetchedObjects , obj.count > 0
+        {
+            let item = obj[indexPath.row]
+            performSegue(withIdentifier: "ItemDetailsVC", sender: item)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "ItemDetailsVC"
+        {
+            if let destination = segue.destination as? ItemDetailsVC
+            {
+                if let item = sender as? Item
+                {
+                    destination.itemToEdit = item
+                }
+            }
+        }
+    }
+    
     func attemptFetch()
     {
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
         let dateSort = NSSortDescriptor(key: "created", ascending: false)
-        fetchRequest.sortDescriptors = [dateSort]
+        let priceSort = NSSortDescriptor(key: "price", ascending: true)
+        let titleSort = NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.caseInsensitiveCompare(_:)))
+        
+        switch(segment.selectedSegmentIndex)
+        {
+        case 0:
+            fetchRequest.sortDescriptors = [dateSort]
+            break
+        case 1:
+            fetchRequest.sortDescriptors = [priceSort]
+            break
+        case 2:
+            fetchRequest.sortDescriptors = [titleSort]
+            break
+        default:
+            fetchRequest.sortDescriptors = [dateSort]
+        }
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         
+        controller.delegate = self
         self.controller = controller
         
         do
@@ -140,6 +181,12 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         item.details = "I fucking love this car. It's probably the most awesome car in the whole world."
         
         appDelegate.saveContext()
+    }
+    
+    @IBAction func sortSelected(_ sender: UISegmentedControl)
+    {
+        attemptFetch()
+        tableView.reloadData()
     }
 }
 

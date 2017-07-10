@@ -20,5 +20,15 @@ class ItemCell: UITableViewCell
         itemTitle.text = item.title
         itemPrice.text = "$\(item.price)"
         itemDescription.text = item.details
+        thumbImage.image = item.toImage?.image as? UIImage
     }
+    
+//    var getItemTitle: String
+//    {
+//        if let item = item
+//        {
+//            return item.title!
+//        }
+//        return ""
+//    }
 }
